@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="./images/logo.png" rel="shortcut icon" type="image/x-icon">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/all.min.css" rel="stylesheet"> <!-- Font Awesome -->
+    <title>Yummy</title>
+</head>
+
+
+<body class="dark-mode position-relative">
+<div class="loading-screen position-fixed top-0 bottom-0 start-0 end-0 dark-mode justify-content-center align-items-center">
+    <i class="fa fa-spinner fa-spin fa-4x">
+
+    </i>
+</div>
+
+
+<div class="controls position-fixed top-0 m-3 d-flex bottom-0 top-0 gap-2">
+    <button class="btn btn-sm btn-outline-secondary rounded-circle" id="toggle-mode" title="Toggle Dark/Light Mode">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+</div>
+
+<!--nav section -->
+<section class="d-flex min-vh-100 position-fixed" id="side-nav-menu">
+    <div class="left-section nav-tab min-vh-100  dark-mode px-2 d-flex flex-column justify-content-between">
+        <ul class="nav-list mt-2 list-unstyled">
+            <li class="p-2 m-2 position-relative" id="search-li">Search</li>
+            <li class="p-2 m-2 position-relative" id="category-li">Categories</li>
+            <li class="p-2 m-2 position-relative" id="area-li">Area</li>
+            <li class="p-2 m-2 position-relative" id="ingredients-li">Ingredients</li>
+            <li class="p-2 m-2 position-relative" id="contact-li">Contact Us</li>
+        </ul>
+
+        <div class="footer">
+            <div class="icons">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fas fa-globe"></i>
+            </div>
+            <p class="p-0 m-0 text-danger">Designed by <a class="a" href="https://github.com/AbdulrahmanHabiba"
+                                                          target="_blank">Abdulrahman
+                Habiba   <i class = "fab fa-github"></i></a></p>
+            <p class="py-2 m-0 small">Copyright Â© 2024 All Rights <span>Reserved.</span></p>
+        </div>
+    </div>
+
+    <div class="right-section menu min-vh-100  light-mode  light-mode border-1 border-info p-2 text-center d-flex flex-column  justify-content-between">
+        <div class="img">
+            <img alt="logo" src="images/logo.png">
+        </div>
+        <div class="menu-icon">
+            <i class="fa-solid fa-align-justify"></i>
+            <!--            <i class="fa-solid fa-x"></i>-->
+        </div>
+
+        <div>
+            <i class="fa logo fa-share-nodes"></i>
+            <i class="fa-solid fa-shopping-cart"></i>
+        </div>
+    </div>
+</section>
+
+<main>
+
+
+    <!--        search section-->
+    <section class="d-none" id="search">
+        <div class="container w-75">
+            <div class="row p-4">
+                <div class="col-md-6">
+                    <input class="form-control search-name" id="nameSearch" placeholder="search by name" type="text">
+                </div>
+                <div class="col-md-6">
+                    <input class="form-control search-letter" id="letterSearch" placeholder="search by first letter"
+                           type="text">
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!--    end search-->
+
+    <!--    contact section-->
+    <section class=" min-vh-100 d-flex justify-content-center align-items-center text-center d-none" id="contact">
+        <div class="container py-5">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-md-6 py-3">
+                    <input class="form-control" id="name" placeholder="Enter your name" type="text">
+                    <div class="text-danger pt-2" id="nameError"></div>
+                </div>
+
+                <div class="col-md-6 py-3">
+                    <input class="form-control" id="email" placeholder="Enter your email" type="email">
+                    <div class="text-danger pt-2" id="emailError"></div>
+                </div>
+
+                <div class="col-md-6 py-3">
+                    <input class="form-control" id="phone" placeholder="Enter your phone" type="number">
+                    <div class="text-danger pt-2" id="phoneError"></div>
+                </div>
+
+                <div class="col-md-6 py-3">
+                    <input class="form-control" id="age" placeholder="Enter your age" type="number">
+                    <div class="text-danger pt-2" id="ageError"></div>
+                </div>
+
+                <div class="col-md-6 py-3">
+                    <input class="form-control" id="password" placeholder="Enter your password" type="password">
+                    <div class="text-danger pt-2" id="passwordError"></div>
+                </div>
+
+                <div class="col-md-6 py-3">
+                    <input class="form-control" id="rePassword" placeholder="Re-enter password" type="password">
+                    <div class="text-danger pt-2" id="rePasswordError"></div>
+                </div>
+
+                <div class="col-12 text-center">
+                    <button class="btn btn-outline-primary w-25 my-2" disabled id="submitBtn">Submit</button>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!--    end contact-->
+
+    <!--        main container-->
+
+    <section id="main-data">
+        <div class="container">
+            <div class="row p-4 gx-3">
+
+            </div>
+        </div>
+    </section>
+    <!--    end main container-->
+
+
+</main>
+
+
+<script src="./js/bootstrap.bundle.min.js"></script>
+<script src="/js/jquery-3.7.1.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
