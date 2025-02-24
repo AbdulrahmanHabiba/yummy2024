@@ -108,10 +108,13 @@ i, li {
     /*border: 1px solid #b31326;*/
     box-shadow: 0 0 10px rgba(179, 19, 62, 0.3);
 }
+.logo {
+    cursor: pointer;
+}
 
 .container {
     position: relative;
-    left: 40px;
+    left: 40px
 }
 
 /*main container*/
@@ -145,7 +148,8 @@ input {
     box-shadow: 0 0 20px #13b3514d;
 }
 .meal{
-    min-height: 140px;
+    height: 100%;
+    min-height: 150px;
     cursor: pointer;
     border-radius: 0.375rem;
     border: 1px solid #b31326;
@@ -154,7 +158,14 @@ input {
 
 input[placeholder] {
     background-color: var(--bg-color);
-    color: var(--text-color);
+    transition: all 0.3s;
+}
+input:focus::placeholder {
+    color:  black !important;
+}
+input::placeholder  {
+    color: var(--text-color) !important;
+    opacity: 1;
     transition: all 0.3s;
 }
 
@@ -167,14 +178,8 @@ a{
     color: var(--text-color);
 }
 
-.row {
-    over-flow : auto
-}
 
 @media (max-width: 576px) {
-    #side-nav-menu {
-        font-size: 14px;
-    }
 
     #side-nav-menu img {
         width: 25px;
@@ -193,6 +198,25 @@ a{
         width: 70%;
     }
     .container {
-        left: 90px;
+        left: 60px;
     }
+    #search , #contact{
+        position: relative;
+        left : -60px
+    }
+    #contact{
+        position: relative;
+        width: 70%;
+        left : 20px
+    }
+    /*.recipes{*/
+    /*    display: flex;*/
+    /*    flex-direction: column;*/
+    /*    gap: 10px;*/
+    /*    max-width: 50%*/
+    /*}*/
+    .meal-desc {
+        max-width: 80%
+    }
+
 }

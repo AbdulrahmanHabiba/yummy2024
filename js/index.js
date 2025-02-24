@@ -2,7 +2,7 @@
 // Handle menu toggle
 $('.menu-icon').on('click', () => {
     $('.menu-icon i').toggleClass('fa-align-justify fa-x');
-    if ($('#side-nav-menu').css("left") == '0px') {
+    if ($('#side-nav-menu').css("left") === '0px') {
         closeNav();
     } else {
         $('#side-nav-menu').animate({left: 0}, 500);
@@ -249,12 +249,12 @@ const displayMealInfo = (array) => {
     const mealHtml = `
           <div class="col-md-3">
         <div class="meal-caption">
-            <img  alt="${array[0].strMeal}" class="border border-0 rounded-2 w-100"src="${array[0].strMealThumb}">
+            <img  alt="${array[0].strMeal}" class="border border-0 rounded-2 mb-3 w-100" src="${array[0].strMealThumb}">
             <h1>${array[0].strMeal}</h1>
         </div>
     
     </div>
-    <div class="col-md-9">
+    <div class="meal-desc col-md-9">
         <div class="meal-info ">
             <h2>Instructions</h2>
             <p class="mb-2">${array[0].strInstructions}</p>
@@ -303,6 +303,10 @@ $('#search-li').on('click', ()=>{search()})
 $('#contact-li').on('click', ()=>{contactUS()})
 
 searchByName('')
+$('.logo').on('click', ()=>{
+    searchByName('')
+    closeNav()
+})
 
 
 function validateInputs() {
