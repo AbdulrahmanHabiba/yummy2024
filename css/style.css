@@ -218,5 +218,8 @@ a{
     .meal-desc {
         max-width: 80%
     }
+    #search .col-md-6 {
+        margin-bottom: 20px;
+    }
 
 }
